@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Success</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.card {
+    padding: 40px 50px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+h2 span {
+    color: #667eea;
+    font-weight: bold;
+}
+
+button {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Welcome, <span th:text="${name}">User</span> 🎉</h2>
+
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+</div>
+
+</body>
+</html>

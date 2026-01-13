@@ -1,0 +1,20 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS testdb;
+USE testdb;
+
+-- Create login table
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Insert sample login user
+INSERT INTO users(username, password)
+VALUES ('pushpak', '123');
+
+-- View users
+SELECT * FROM users;
+
+-- Drop table if needed
+DROP TABLE users;
